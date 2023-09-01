@@ -12,15 +12,22 @@ sound:Play()
 wait()
 game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "If you don't have a tool, equip one then click this", Duration = 5})
 
-for i,v in pairs(game:GetService('Players').LocalPlayer.Character:GetChildren()) do
-    if v:IsA("Tool") and not v.Name:find("Reach X") then
-        local a = Instance.new("SelectionBox",v.Handle)
+local localPlayer = game:GetService('Players').LocalPlayer
+
+for i,v in pairs(localPlayer.Character:GetChildren()) do
+    if v:IsA("Tool") then
+        local toolName = v.Name:match("(.+) Reach [XYZ]")
+        if toolName then
+            v.Name = toolName
+        end
+
+        local a = Instance.new("SelectionBox", v.Handle)
         v.Name = v.Name .. " Reach X"
         v.Handle.Massless = true
         v.Handle.Transparency = 1
         a.Adornee = v.Handle
         v.Handle.Size = Vector3.new(1000, 2.5, 2.5)
-        local selectionBox = Instance.new("SelectionBox",v.Handle)
+        local selectionBox = Instance.new("SelectionBox", v.Handle)
         selectionBox.Adornee = v.Handle
         selectionBox.Color3 = Color3.new(0, 0.313725, 0.47451)
         selectionBox.Transparency = 1
@@ -36,15 +43,22 @@ sound:Play()
 wait()
 game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "If you don't have a tool, equip one then click this", Duration = 5})
 
-for i,v in pairs(game:GetService('Players').LocalPlayer.Character:GetChildren()) do
-    if v:IsA("Tool") and not v.Name:find("Reach Y") then
-        local a = Instance.new("SelectionBox",v.Handle)
+local localPlayer = game:GetService('Players').LocalPlayer
+
+for i,v in pairs(localPlayer.Character:GetChildren()) do
+    if v:IsA("Tool") then
+        local toolName = v.Name:match("(.+) Reach [XYZ]")
+        if toolName then
+            v.Name = toolName
+        end
+
+        local a = Instance.new("SelectionBox", v.Handle)
         v.Name = v.Name .. " Reach Y"
         v.Handle.Massless = true
         v.Handle.Transparency = 1
         a.Adornee = v.Handle
         v.Handle.Size = Vector3.new(2.5, 1000, 2.5)
-        local selectionBox = Instance.new("SelectionBox",v.Handle)
+        local selectionBox = Instance.new("SelectionBox", v.Handle)
         selectionBox.Adornee = v.Handle
         selectionBox.Color3 = Color3.new(0, 0.313725, 0.47451)
         selectionBox.Transparency = 1
@@ -60,15 +74,22 @@ sound:Play()
 wait()
 game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "If you don't have a tool, equip one then click this", Duration = 5})
 
-for i,v in pairs(game:GetService('Players').LocalPlayer.Character:GetChildren()) do
-    if v:IsA("Tool") and not v.Name:find("Reach Z") then
-        local a = Instance.new("SelectionBox",v.Handle)
+local localPlayer = game:GetService('Players').LocalPlayer
+
+for i,v in pairs(localPlayer.Character:GetChildren()) do
+    if v:IsA("Tool") then
+        local toolName = v.Name:match("(.+) Reach [XYZ]")
+        if toolName then
+            v.Name = toolName
+        end
+
+        local a = Instance.new("SelectionBox", v.Handle)
         v.Name = v.Name .. " Reach Z"
         v.Handle.Massless = true
         v.Handle.Transparency = 1
         a.Adornee = v.Handle
         v.Handle.Size = Vector3.new(2.5, 2.5, 1000)
-        local selectionBox = Instance.new("SelectionBox",v.Handle)
+        local selectionBox = Instance.new("SelectionBox", v.Handle)
         selectionBox.Adornee = v.Handle
         selectionBox.Color3 = Color3.new(0, 0.313725, 0.47451)
         selectionBox.Transparency = 1
