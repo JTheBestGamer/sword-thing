@@ -1,79 +1,77 @@
-local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/VisualRoblox/Roblox/main/UI-Libraries/Visual%20UI%20Library/Source.lua'))()
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
 
-local Window = Library:CreateWindow('Sword Reach', 'Universal', 'Visual UI Library', 'rbxassetid://10618928818', false, 'VisualUIConfigs', 'Default')
+local PhantomForcesWindow = Library:NewWindow("Sword")
 
-local Tab = Window:CreateTab('the thing', true, 'rbxassetid://3926305904', Vector2.new(524, 44), Vector2.new(36, 36))
+local KillingCheats = PhantomForcesWindow:NewSection("Reach")
 
-local Section = Tab:CreateSection('the section for thing')
+KillingCheats:CreateButton("Sword X", function()
+local sound = Instance.new("Sound")
+sound.SoundId = "rbxassetid://413861777"
+sound.Parent = game:GetService("SoundService")
+sound:Play()
+wait()
+game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "If you don't have a tool, equip one then click this", Duration = 5})
 
-local ReachX = Section:CreateButton('Reach X', function()
-    local sound = Instance.new("Sound")
-    sound.SoundId = "rbxassetid://413861777"
-    sound.Parent = game:GetService("SoundService")
-    sound:Play()
-    wait()
-    game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "If you don't have a tool, equip one then click this", Duration = 5})
-    
-    for i,v in pairs(game:GetService('Players').LocalPlayer.Character:GetChildren()) do
-        if v:IsA("Tool") then
-            local a = Instance.new("SelectionBox",v.Handle)
-            v.Name = v.Name .. " Reach X"
-            v.Handle.Massless = true
-            v.Handle.Transparency = 1
-            a.Adornee = v.Handle
-            v.Handle.Size = Vector3.new(1000, 2.5, 2.5)
-            local selectionBox = Instance.new("SelectionBox",v.Handle)
-            selectionBox.Adornee = v.Handle
-            selectionBox.Color3 = Color3.new(0, 0.313725, 0.47451)
-            selectionBox.Transparency = 1
-        end
+for i,v in pairs(game:GetService('Players').LocalPlayer.Character:GetChildren()) do
+    if v:IsA("Tool") and not v.Name:find("Reach X") then
+        local a = Instance.new("SelectionBox",v.Handle)
+        v.Name = v.Name .. " Reach X"
+        v.Handle.Massless = true
+        v.Handle.Transparency = 1
+        a.Adornee = v.Handle
+        v.Handle.Size = Vector3.new(1000, 2.5, 2.5)
+        local selectionBox = Instance.new("SelectionBox",v.Handle)
+        selectionBox.Adornee = v.Handle
+        selectionBox.Color3 = Color3.new(0, 0.313725, 0.47451)
+        selectionBox.Transparency = 1
     end
+end
 end)
 
-local ReachY = Section:CreateButton('Reach Y', function()
-    local sound = Instance.new("Sound")
-    sound.SoundId = "rbxassetid://413861777"
-    sound.Parent = game:GetService("SoundService")
-    sound:Play()
-    wait()
-    game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "If you don't have a tool, equip one then click this", Duration = 5})
-    
-    for i,v in pairs(game:GetService('Players').LocalPlayer.Character:GetChildren()) do
-        if v:IsA("Tool") then
-            local a = Instance.new("SelectionBox",v.Handle)
-            v.Name = v.Name .. " Reach Y"
-            v.Handle.Massless = true
-            v.Handle.Transparency = 1
-            a.Adornee = v.Handle
-            v.Handle.Size = Vector3.new(2.5, 1000, 2.5)
-            local selectionBox = Instance.new("SelectionBox",v.Handle)
-            selectionBox.Adornee = v.Handle
-            selectionBox.Color3 = Color3.new(0, 0.313725, 0.47451)
-            selectionBox.Transparency = 1
-        end
+KillingCheats:CreateButton("Sword Y", function()
+local sound = Instance.new("Sound")
+sound.SoundId = "rbxassetid://413861777"
+sound.Parent = game:GetService("SoundService")
+sound:Play()
+wait()
+game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "If you don't have a tool, equip one then click this", Duration = 5})
+
+for i,v in pairs(game:GetService('Players').LocalPlayer.Character:GetChildren()) do
+    if v:IsA("Tool") and not v.Name:find("Reach Y") then
+        local a = Instance.new("SelectionBox",v.Handle)
+        v.Name = v.Name .. " Reach Y"
+        v.Handle.Massless = true
+        v.Handle.Transparency = 1
+        a.Adornee = v.Handle
+        v.Handle.Size = Vector3.new(2.5, 1000, 2.5)
+        local selectionBox = Instance.new("SelectionBox",v.Handle)
+        selectionBox.Adornee = v.Handle
+        selectionBox.Color3 = Color3.new(0, 0.313725, 0.47451)
+        selectionBox.Transparency = 1
     end
+end
 end)
 
-local ReachZ = Section:CreateButton('Reach Z', function()
-    local sound = Instance.new("Sound")
-    sound.SoundId = "rbxassetid://413861777"
-    sound.Parent = game:GetService("SoundService")
-    sound:Play()
-    wait()
-    game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "If you don't have a tool, equip one then click this", Duration = 5})
-    
-    for i,v in pairs(game:GetService('Players').LocalPlayer.Character:GetChildren()) do
-        if v:IsA("Tool") then
-            local a = Instance.new("SelectionBox",v.Handle)
-            v.Name = v.Name .. " Reach Z"
-            v.Handle.Massless = true
-            v.Handle.Transparency = 1
-            a.Adornee = v.Handle
-            v.Handle.Size = Vector3.new(2.5, 2.5, 1000)
-            local selectionBox = Instance.new("SelectionBox",v.Handle)
-            selectionBox.Adornee = v.Handle
-            selectionBox.Color3 = Color3.new(0, 0.313725, 0.47451)
-            selectionBox.Transparency = 1
-        end
+KillingCheats:CreateButton("Sword Z", function()
+local sound = Instance.new("Sound")
+sound.SoundId = "rbxassetid://413861777"
+sound.Parent = game:GetService("SoundService")
+sound:Play()
+wait()
+game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "If you don't have a tool, equip one then click this", Duration = 5})
+
+for i,v in pairs(game:GetService('Players').LocalPlayer.Character:GetChildren()) do
+    if v:IsA("Tool") and not v.Name:find("Reach Z") then
+        local a = Instance.new("SelectionBox",v.Handle)
+        v.Name = v.Name .. " Reach Z"
+        v.Handle.Massless = true
+        v.Handle.Transparency = 1
+        a.Adornee = v.Handle
+        v.Handle.Size = Vector3.new(2.5, 2.5, 1000)
+        local selectionBox = Instance.new("SelectionBox",v.Handle)
+        selectionBox.Adornee = v.Handle
+        selectionBox.Color3 = Color3.new(0, 0.313725, 0.47451)
+        selectionBox.Transparency = 1
     end
+end
 end)
