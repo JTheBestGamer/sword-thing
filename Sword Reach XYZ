@@ -1,12 +1,12 @@
-local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3')))()
+local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/VisualRoblox/Roblox/main/UI-Libraries/Visual%20UI%20Library/Source.lua'))()
 
-local w = library:CreateWindow("SwordStuff") -- Creates the window
+local Window = Library:CreateWindow('Hub Name', 'Game Name', 'Visual UI Library', 'rbxassetid://10618928818', false, 'VisualUIConfigs', 'Default')
 
-local b = w:CreateFolder("brokenhitbox") -- Creates the folder(U will put here your buttons,etc)
+local Tab = Window:CreateTab('Tab', true, 'rbxassetid://3926305904', Vector2.new(524, 44), Vector2.new(36, 36))
 
-local Name = v.Name
+local Section = Tab:CreateSection('Section')
 
-b:Button("Sword X", function()
+local ReachX = Section:CreateButton('Reach X', function()
     local sound = Instance.new("Sound")
     sound.SoundId = "rbxassetid://413861777"
     sound.Parent = game:GetService("SoundService")
@@ -17,7 +17,7 @@ b:Button("Sword X", function()
     for i,v in pairs(game:GetService('Players').LocalPlayer.Character:GetChildren()) do
         if v:IsA("Tool") then
             local a = Instance.new("SelectionBox",v.Handle)
-            v.Name = v.Name .. " Reach X" -- Appends " Reach X" to the original tool name
+            v.Name = v.Name .. " Reach X"
             v.Handle.Massless = true
             v.Handle.Transparency = 1
             a.Adornee = v.Handle
@@ -30,7 +30,7 @@ b:Button("Sword X", function()
     end
 end)
 
-b:Button("Sword Y", function()
+local ReachY = Section:CreateButton('Reach Y', function()
     local sound = Instance.new("Sound")
     sound.SoundId = "rbxassetid://413861777"
     sound.Parent = game:GetService("SoundService")
@@ -41,7 +41,7 @@ b:Button("Sword Y", function()
     for i,v in pairs(game:GetService('Players').LocalPlayer.Character:GetChildren()) do
         if v:IsA("Tool") then
             local a = Instance.new("SelectionBox",v.Handle)
-            v.Name = v.Name .. " Reach Y" -- Appends " Reach Y" to the original tool name
+            v.Name = v.Name .. " Reach Y"
             v.Handle.Massless = true
             v.Handle.Transparency = 1
             a.Adornee = v.Handle
@@ -54,7 +54,7 @@ b:Button("Sword Y", function()
     end
 end)
 
-b:Button("Sword Z", function()
+local ReachZ = Section:CreateButton('Reach Z', function()
     local sound = Instance.new("Sound")
     sound.SoundId = "rbxassetid://413861777"
     sound.Parent = game:GetService("SoundService")
@@ -65,11 +65,11 @@ b:Button("Sword Z", function()
     for i,v in pairs(game:GetService('Players').LocalPlayer.Character:GetChildren()) do
         if v:IsA("Tool") then
             local a = Instance.new("SelectionBox",v.Handle)
-            v.Name = v.Name .. " Reach Z" -- Appends " Reach Z" to the original tool name
+            v.Name = v.Name .. " Reach Z"
             v.Handle.Massless = true
             v.Handle.Transparency = 1
             a.Adornee = v.Handle
-            v.Handle.Size = Vector3.new(1000, 2.5, 2.5)
+            v.Handle.Size = Vector3.new(2.5, 2.5, 1000)
             local selectionBox = Instance.new("SelectionBox",v.Handle)
             selectionBox.Adornee = v.Handle
             selectionBox.Color3 = Color3.new(0, 0.313725, 0.47451)
